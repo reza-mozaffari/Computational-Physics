@@ -18,7 +18,6 @@ class Trapezoidal ():
 		s = 0.5*(self.f(self.a) + self.f(self.b))*self.h
 		for i in range(1,self.n):
 			s = s + self.f(self.a + i*self.h)*self.h
-
 		return s
 
 if __name__ == "__main__":
