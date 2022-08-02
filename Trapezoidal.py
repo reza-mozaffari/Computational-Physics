@@ -17,7 +17,7 @@ class Trapezoidal ():
 	def Integral (self):
 		s = 0.0
 		for i in range(0, self.n):
-			s += (self.f(self.a + i*self.h) + self.f(self.a + (i+1)*self.h))*self.h/2.0
+			s += ( self.f(self.a + i*self.h) + self.f(self.a + (i+1)*self.h) )*self.h/2.0
 		return s
 
 if __name__ == "__main__":
