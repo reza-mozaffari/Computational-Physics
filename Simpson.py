@@ -20,7 +20,7 @@ class Simpson ():
 	def Integral (self):
 		s = 0.0
 		for i in range(0, self.n, 2):
-			s += ( self.f(self.a + i*self.h) +  4.0*self.f(self.a + (i+1)*self.h) +  self.f(self.a + (i+2)*self.h))*self.h/3.0
+			s += ( self.f(self.a + i*self.h) +  4.0*self.f(self.a + (i+1)*self.h) +  self.f(self.a + (i+2)*self.h) )*self.h/3.0
 		return s
 
 if __name__ == "__main__":
