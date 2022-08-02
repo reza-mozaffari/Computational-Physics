@@ -4,6 +4,7 @@
 	M. Reza Mozaffari
 	Physics Group, University of Qom
 """
+from math import *
 
 class Trapezoidal ():
 	def __init__ (self, f, a, b, n):
@@ -23,7 +24,7 @@ class Trapezoidal ():
 if __name__ == "__main__":
 		
 	def g(x):
-		return x
+		return x*sin(x)
 
-	trap = Trapezoidal (g, 1.0, 2.0, 100)
+	trap = Trapezoidal (g, 0.0, pi, 100)
 	print(trap.Integral())
