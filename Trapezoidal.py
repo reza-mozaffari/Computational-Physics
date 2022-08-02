@@ -15,9 +15,9 @@ class Trapezoidal ():
 		self.h = (b - a)/n
 	
 	def Integral (self):
-		s = 0.5*(self.f(self.a) + self.f(self.b))*self.h
-		for i in range(1,self.n):
-			s = s + self.f(self.a + i*self.h)*self.h
+		s = 0.0
+		for i in range(0, self.n):
+			s += (self.f(self.a + i*self.h) + self.f(self.a + (i+1)*self.h))*self.h/2.0
 		return s
 
 if __name__ == "__main__":
@@ -25,5 +25,5 @@ if __name__ == "__main__":
 	def g(x):
 		return x*sin(x)
 
-	trap = Trapezoidal (g, 0.0, pi, 100)
+	trap = Trapezoidal (g, 0.0, pi, 250)
 	print(trap.Integral())
